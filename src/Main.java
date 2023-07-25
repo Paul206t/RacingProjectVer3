@@ -16,7 +16,7 @@ public class Main {
 
         // Main game loop
         gameLogic.intro();
-        gameLogic.pullCurrentCarStats(gameLogic.pickCarFromGarage());
+        gameLogic.printCurrentCarStats(gameLogic.pickCarFromGarage());
 
         // TODO: this particular method is old logic from my previous 'GT' project
         gameLogic.laps();

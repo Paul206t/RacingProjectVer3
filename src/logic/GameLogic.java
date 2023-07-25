@@ -53,7 +53,7 @@ public class GameLogic {
         return result;
     }
 
-    public void pullCurrentCarStats(int pickedCar) throws Exception {
+    public void printCurrentCarStats(int pickedCar) throws Exception {
 
         Car car = new Car();
 
