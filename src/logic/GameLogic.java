@@ -93,9 +93,9 @@ public class GameLogic {
             System.out.println(textProp.getProperty("text.laps.numLapsLessThanAllowed"));
             laps();
         } else {
-            // Asking for each lap time
             System.out.println("\n" + textProp.getProperty("text.laps.lapSeconds") + "\n");
-            // Created double type array to store size of it based on what was entered for numLaps
+
+            // Created double type lapTimes array to store number of elements equal to how many laps were entered
             double[] lapTimes = new double[numLaps];
 
             // For loop to ask for each Lap time only up to the number of laps that was inputted (lapTimes.length)
@@ -105,7 +105,7 @@ public class GameLogic {
                 lapTimes[i] = scan.nextDouble();
             }
 
-            // Sets fastest lap initially to first element of lapTimes array
+            // Sets first element of lapTimes array to fastestTime
             double fastestTime = lapTimes[0];
 
             // For loop to compare each element of the array to the next until it gets to the end and sets
@@ -118,6 +118,7 @@ public class GameLogic {
             }
 
             System.out.format("\n" + textProp.getProperty("text.laps.fastestLapTime") + " %.2f seconds \n", fastestTime);
+
             // Get sum of all lap times and calculate + print the average lap time
             double sumLaps = 0;
             double lengthLapTimes = lapTimes.length;

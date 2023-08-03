@@ -59,6 +59,7 @@ public class Car {
             return null;
         }
 
+        // Read the car file that was pulled
         carProp = new Properties();
         carProp.load(reader);
 
@@ -70,10 +71,9 @@ public class Car {
         int weightInt = parseInt(carProp.getProperty("car.weight"));
 
         // Feed car from selected car.properties file into car constructor
-        vehicles.Car result = new Car(caridInt, carProp.getProperty("car.manufacturer"), carProp.getProperty("car.carModel"), yearInt,
+        return new Car(caridInt, carProp.getProperty("car.manufacturer"), carProp.getProperty("car.carModel"), yearInt,
                 powerInt, carProp.getProperty("car.drivetrain"), topSpeedInt,
                 weightInt, carProp.getProperty("car.countryofOrigin"));
-        return result;
     }
 
 
