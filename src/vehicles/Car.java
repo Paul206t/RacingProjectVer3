@@ -46,6 +46,7 @@ public class Car {
         FileReader reader;
 
         // Pull proper car.properties file based on carID
+        // TODO: this logic will need to change/look a little nicer as the game grows
         if(carID == 1){
             reader = new FileReader("resources/cars/car1.properties");
         }
